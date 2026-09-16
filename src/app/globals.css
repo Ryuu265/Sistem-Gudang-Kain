@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #1A1B1F;
+    --bg-surface: #232428;
+    --bg-elevated: #2A2B30;
+    --bg-input: #2E2F35;
+    --border: #33343A;
+
+    --primary: #6C5CE7;
+    --primary-hover: #7D6FF0;
+    --primary-soft: rgba(108, 92, 231, 0.15);
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #9A9BA3;
+    --text-muted: #6B6C75;
+
+    --success: #2ECC71;
+    --danger: #FF5C5C;
+    --warning: #FF8A3D;
+    --info: #4A9BFF;
+  }
+
+  .light {
+    --bg-base: #F4F5F8;
+    --bg-surface: #FFFFFF;
+    --bg-elevated: #EFEFF3;
+    --bg-input: #E4E5EB;
+    --border: #DCDEE5;
+
+    --primary: #6C5CE7;
+    --primary-hover: #5B4BC4;
+    --primary-soft: rgba(108, 92, 231, 0.12);
+
+    --text-primary: #121316;
+    --text-secondary: #5A5C66;
+    --text-muted: #8E909A;
+
+    --success: #27AE60;
+    --danger: #E74C3C;
+    --warning: #E67E22;
+    --info: #2980B9;
+  }
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', var(--font-sans, system-ui, -apple-system, sans-serif);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-input);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border);
+}
+
+/* Cards & Surfaces */
+.bg-surface {
+  background-color: var(--bg-surface);
+}
+.bg-elevated {
+  background-color: var(--bg-elevated);
+}
+.bg-input-custom {
+  background-color: var(--bg-input);
+}
+.border-custom {
+  border-color: var(--border);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #7B61FF 0%, #6C5CE7 50%, #9B6DFF 100%);
+}
+
+.text-primary-custom {
+  color: var(--text-primary);
+}
+.text-secondary-custom {
+  color: var(--text-secondary);
+}
+.text-muted-custom {
+  color: var(--text-muted);
+}
+
+.badge-success {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #2ECC71;
+}
+.badge-warning {
+  background-color: rgba(255, 138, 61, 0.15);
+  color: #FF8A3D;
+}
+.badge-danger {
+  background-color: rgba(255, 92, 92, 0.15);
+  color: #FF5C5C;
+}
+.badge-info {
+  background-color: rgba(74, 155, 255, 0.15);
+  color: #4A9BFF;
+}
+.badge-purple {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+}
