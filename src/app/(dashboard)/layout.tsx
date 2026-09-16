@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   return (
     <AppProvider>
-      <div className="flex min-h-screen bg-[#1A1B1F] text-white">
+      <div className="flex min-h-screen bg-[var(--bg-base)] text-[var(--text-primary)] transition-colors duration-300">
         {/* Desktop Sidebar */}
         <Sidebar />
 
